@@ -50,7 +50,7 @@ export default {
             axios.get('https://localhost:7237/Schedules/GetAll')
                 .then(response => {
                     this.schedules = response.data;
-                    console.log(this.schedules);
+                    console.log(response);
                 })
                 .catch(error => console.log(error))
         },

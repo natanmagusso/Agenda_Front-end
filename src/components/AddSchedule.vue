@@ -49,12 +49,12 @@ export default {
             axios.post('https://localhost:7237/Schedules/Insert', values)
             .then(response => {
                 this.schedules = response.data;
-                    console.log(this.schedules);
+                    console.log(response);
                     alert("Registro inserido com sucesso.");
 
-                    this.schedule.name = '',
-                    this.schedule.email = '',
-                    this.schedule.cellPhone = ''
+                    this.schedule.name = '';
+                    this.schedule.email = '';
+                    this.schedule.cellPhone = '';
                 })
                 .catch(error => console.log(error))
         }

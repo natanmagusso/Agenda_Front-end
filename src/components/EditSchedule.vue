@@ -43,7 +43,12 @@ export default {
             cellphone: '',
         }
     },
-    
+    mounted() {
+        this.id = this.$route.params.id
+        this.name = this.$route.params.name
+        this.email = this.$route.params.email
+        this.cellphone = this.$route.params.cellphone
+    },
     methods: {
         EditSchedule: function() {
             const values = {
@@ -51,23 +56,19 @@ export default {
                 name: this.name,
                 email: this.email,
                 cellphone: this.cellphone,
-            };  
-
+            };
             axios.put(`https://localhost:7237/Schedules/Update/${this.id}`, values)
             .then(response => {
                 this.schedules = response.data;
-                    //console.log(this.schedules);
                     console.log(response);
-                    alert("Registro atualizado com sucesso.")
+                    alert("Registro atualizado com sucesso.");
+
+                    this.name = '';
+                    this.email = '';
+                    this.cellphone = '';
                 })
                 .catch(error => console.log(error))
         }
     },
-    mounted() { // essa função é carregada quando a tela é "montada"
-        this.id = this.$route.params.id
-        this.name = this.$route.params.name
-        this.email = this.$route.params.email
-        this.cellphone = this.$route.params.cellphone
-    }
 }
 </script>
