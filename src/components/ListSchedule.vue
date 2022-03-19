@@ -1,8 +1,9 @@
 <template>
+    <br>
     <div class="container">
         <div class="card">
             <div class="card-header">
-                Agenda de contatos
+                <b>Agenda de contatos</b>
             </div>
             <div class="card-body">
                 <router-link :to="{name:'Add'}" class="btn btn-primary">Adicionar</router-link>

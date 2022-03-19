@@ -1,8 +1,9 @@
 <template>
+    <br>
     <div class="container">
         <div class="card">
             <div class="card-header">
-                Adicionar contatos
+                <b>Adicionar contatos</b>
             </div>
             <div class="card-body">
                 <form v-on:submit.prevent="AddSchedule"> 

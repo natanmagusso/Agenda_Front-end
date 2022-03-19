@@ -12,7 +12,6 @@ import HelloWorld from '@/components/HelloWorld.vue'
         <RouterLink to="/list">Registros</RouterLink>
         <RouterLink to="/developer">Desenvolvedor</RouterLink>
       </nav>
-      <br>
     </div>
   </header>
 
